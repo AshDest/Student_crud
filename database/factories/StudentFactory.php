@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Students;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,10 @@ class StudentFactory extends Factory
     public function definition()
     {
         return [
-            //
+           'firstname' => $this->faker->firstname,
+           'lastname' => $this->faker->lastname,
+           'email' => $this->faker->email,
+           'phone' => $this->faker->phone,
         ];
     }
 }
