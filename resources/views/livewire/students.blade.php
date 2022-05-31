@@ -19,10 +19,10 @@
                             <tbody>
                                 @foreach ($students as $student)
                                     <tr>
-                                        <td>{{$tudent->firstname}}</td>
-                                        <td>{{$tudent->lastname}}</td>
-                                        <td>{{$tudent->email}}</td>
-                                        <td>{{$tudent->phone}}</td>
+                                        <td>{{$student->firstname}}</td>
+                                        <td>{{$student->lastname}}</td>
+                                        <td>{{$student->email}}</td>
+                                        <td>{{$student->phone}}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
