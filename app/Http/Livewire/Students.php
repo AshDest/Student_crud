@@ -10,6 +10,6 @@ class Students extends Component
     public function render()
     {
         $students = Student::orderBy('id','DESC')->get();
-        return view('livewire.students');
+        return view('livewire.students', ['students'=>$students]);
     }
 }
