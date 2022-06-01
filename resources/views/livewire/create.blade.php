@@ -10,19 +10,19 @@
                 <form>
                     <div class="form-group">
                         <label for="firstname">First Name</label>
-                        <input type="text" name="firstname" class="form-control">
+                        <input type="text" name="firstname" class="form-control" wire:model='firstname'>
                     </div>
                     <div class="form-group">
                         <label for="lastname">Last Name</label>
-                        <input type="text" name="lastname" class="form-control">
+                        <input type="text" name="lastname" class="form-control" wire:model='lastname'>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email" class="form-control">
+                        <input type="email" name="email" class="form-control" wire:model='email'>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone</label>
-                        <input type="text" name="phone" class="form-control">
+                        <input type="text" name="phone" class="form-control" wire:model='phone'>
                     </div>
                 </form>
             </div>
