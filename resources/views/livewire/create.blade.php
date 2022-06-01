@@ -17,18 +17,18 @@
                         <input type="text" name="lastname" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="email">First Name</label>
+                        <label for="email">Email</label>
                         <input type="email" name="email" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="phone">First Name</label>
+                        <label for="phone">Phone</label>
                         <input type="text" name="phone" class="form-control">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary">Add Student</button>
             </div>
         </div>
     </div>
