@@ -12,6 +12,26 @@ class Students extends Component
     public $email;
     public $phone;
 
+
+    public function resetInputFields()
+    {
+        $this->firstname = '';
+        $this->lastname = '';
+        $this->email = '';
+        $this->phone = '';
+    }
+
+    public function store()
+    {
+        $validatedData = $this->validate([
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'email' => 'required',
+            'phone' => 'required'
+
+        ]);
+    }
+
     public function render()
     {
         $students = Student::orderBy('id','DESC')->get();
