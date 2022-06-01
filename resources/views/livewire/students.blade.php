@@ -1,4 +1,5 @@
 <div>
+    @include('livewire.create')
     <section>
         <div class="container">
             <div class="row">
@@ -6,6 +7,11 @@
                     <div class="card">
                         <div class="card-header">
                             <h1>All Students</h1>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#addStudentModal">
+                                Add Student
+                            </button>
                         </div>
                         <div class="cad-body">
                             <table class="table table-striped">
@@ -19,12 +25,12 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($students as $student)
-                                        <tr>
-                                            <td>{{$student->firstname}}</td>
-                                            <td>{{$student->lastname}}</td>
-                                            <td>{{$student->email}}</td>
-                                            <td>{{$student->phone}}</td>
-                                        </tr>
+                                    <tr>
+                                        <td>{{$student->firstname}}</td>
+                                        <td>{{$student->lastname}}</td>
+                                        <td>{{$student->email}}</td>
+                                        <td>{{$student->phone}}</td>
+                                    </tr>
                                     @endforeach
                                 </tbody>
                             </table>
