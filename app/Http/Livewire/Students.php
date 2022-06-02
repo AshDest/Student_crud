@@ -28,8 +28,11 @@ class Students extends Component
             'lastname' => 'required',
             'email' => 'required',
             'phone' => 'required'
-
         ]);
+        Student::created($validatedData);
+        session()->flash('Message', 'Student created successfully');
+        $this->resetInputFields();
+        $this->emit('Student added');
     }
 
     public function render()

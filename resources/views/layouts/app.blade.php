@@ -23,5 +23,8 @@
 <body>
     {{$slot}}
     @livewireScripts
+    <script>
+        window.on('StudentAdded')
+    </script>
 </body>
 </html>
