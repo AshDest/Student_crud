@@ -32,7 +32,7 @@ class Students extends Component
         Student::created($validatedData);
         session()->flash('Message', 'Student created successfully');
         $this->resetInputFields();
-        $this->emit('Student added');
+        $this->emit('StudentAdded');
     }
 
     public function render()

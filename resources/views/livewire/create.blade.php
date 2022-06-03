@@ -28,7 +28,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Add Student</button>
+                <button type="button" class="btn btn-primary" wire:click.prevent='store()'>Add Student</button>
             </div>
         </div>
     </div>
