@@ -24,7 +24,7 @@
     {{$slot}}
     @livewireScripts
     <script>
-        window.on('StudentAdded',()=>{
+        window.livewire.on('StudentAdded',()=>{
             $('#addStudentModal').modal('hide');
         })
     </script>
