@@ -69,6 +69,15 @@ class Students extends Component
         }
     }
 
+    public function delete($id)
+    {
+        if($id)
+        {
+            Student::where('id',$id)->delete();
+            session()->flash('message', 'Student deleted successfully');
+        }
+    }
+
     public function render()
     {
         $students = Student::orderBy('id','DESC')->get();

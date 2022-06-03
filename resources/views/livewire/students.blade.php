@@ -37,6 +37,7 @@
                                         <td>{{$student->phone}}</td>
                                         <td>
                                             <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#updateStudentModal" wire:click.prevent="edit({{$student->id}})">Edit</button>
+                                            <button type="button" class="btn btn-danger" wire:click.prevent="delete({{$student->id}})">Delete</button>
                                         </td>
                                     </tr>
                                     @endforeach
