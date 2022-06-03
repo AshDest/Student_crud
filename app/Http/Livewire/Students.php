@@ -81,7 +81,12 @@ class Students extends Component
 
     public function render()
     {
-        $students = Student::orderBy('id','DESC')->get();
+        $searchTerm = '%'.$this->searchTerm . '%';
+        $students = Student::where('firstname','LIKE',$searchTerm)
+                            ->orWhere('lastname','LIKE',$searchTerm)
+                            ->orWhere('email','LIKE',$searchTerm)
+                            ->orWhere('phone','LIKE',$searchTerm)
+                            ->orderBy('id','DESC')->get();
         return view('livewire.students', ['students'=>$students]);
     }
 }
