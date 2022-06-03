@@ -10,12 +10,19 @@
                     @endif
                     <div class="card">
                         <div class="card-header">
-                            <h1>All Students</h1>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#addStudentModal">
-                                Add New Student
-                            </button>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h1>All Students</h1>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#addStudentModal">
+                                        Add New Student
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" placeholder="Search..." wire:model="searchTerm"/>
+                            </div>
                         </div>
                         <div class="cad-body">
                             <table class="table table-striped">

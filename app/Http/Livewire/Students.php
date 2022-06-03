@@ -12,6 +12,7 @@ class Students extends Component
     public $lastname;
     public $email;
     public $phone;
+    public $searchTerm;
 
 
     public function resetInputFields()
