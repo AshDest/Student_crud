@@ -29,8 +29,8 @@ class Students extends Component
             'email' => 'required',
             'phone' => 'required'
         ]);
-        Student::created($validatedData);
-        session()->flash('Message', 'Student created successfully');
+        Student::create($validatedData);
+        session()->flash('message', 'Student created successfully');
         $this->resetInputFields();
         $this->emit('StudentAdded');
     }
