@@ -1,5 +1,6 @@
 <div>
     @include('livewire.create')
+    @include('livewire.update')
     <section>
         <div class="container">
             <div class="row">
