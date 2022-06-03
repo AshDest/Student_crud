@@ -24,6 +24,7 @@
                                         <th>Last Name</th>
                                         <th>Email</th>
                                         <th>Phone</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -33,6 +34,9 @@
                                         <td>{{$student->lastname}}</td>
                                         <td>{{$student->email}}</td>
                                         <td>{{$student->phone}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#updateStudentModal" wire:click.prevent="edit({{$student->id}})">Edit</button>
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>
