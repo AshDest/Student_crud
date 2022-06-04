@@ -22,7 +22,7 @@ class Uploads extends Component
         $filename = $this->filename->store('files', 'public');
         $validateData['filename'] = $filename;
         Upload::create($validateData);
-        session()->flash('message', 'File Successfully uploaded');
+        session()->flash('message','File Successfully uploaded');
         $this->emit('fileUploaded');
     }
     public function render()
