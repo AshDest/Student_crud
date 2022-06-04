@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\Students;
+use App\Http\Livewire\Uploads;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/students', Students::class);
+Route::get('/uploads', Uploads::class);
 
 Auth::routes();
 
