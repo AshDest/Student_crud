@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Student;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Students extends Component
 {
@@ -79,6 +80,7 @@ class Students extends Component
         }
     }
 
+    use WithPagination;
     public function render()
     {
         $searchTerm = '%'.$this->searchTerm . '%';
@@ -86,7 +88,7 @@ class Students extends Component
                             ->orWhere('lastname','LIKE',$searchTerm)
                             ->orWhere('email','LIKE',$searchTerm)
                             ->orWhere('phone','LIKE',$searchTerm)
-                            ->orderBy('id','DESC')->get();
+                            ->orderBy('id','DESC')->paginate(5);
         return view('livewire.students', ['students'=>$students]);
     }
 }

@@ -2,6 +2,11 @@
     @include('livewire.create')
     @include('livewire.update')
     <section>
+        <style>
+            nav svg{
+                max-height: 20px;
+            }
+        </style>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -50,6 +55,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            {{$students->links()}}
                         </div>
                     </div>
                 </div>
