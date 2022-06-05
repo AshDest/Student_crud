@@ -16,7 +16,7 @@
                             <div class="form-group">
                                 <label for="images">Choose Images</label>
                                 <input type="file" name="images" class="form-control" wire:model='images' multiple />
-                                @error('images.*')
+                                @error('images')
                                     <span class="text-danger error">{{message}}</span>
                                 @enderror
                             </div>

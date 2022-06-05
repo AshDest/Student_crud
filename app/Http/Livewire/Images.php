@@ -14,7 +14,7 @@ class Images extends Component
     public function uploadImages()
     {
         $this->validate([
-            'images.*' => 'image|max:1024', // 1MB Max
+            'images' => 'image|max:1024', // 1MB Max
         ]);
         foreach($this->images as $key=>$image){
             $this->images[$key] = $image->store('images', 'public');
