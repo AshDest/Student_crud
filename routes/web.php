@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Livewire\Images;
 use App\Http\Livewire\Students;
 use App\Http\Livewire\Uploads;
-use App\Models\Image;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +22,6 @@ Route::get('/', function () {
 Route::get('/students', Students::class);
 Route::get('/uploads', Uploads::class);
 Route::get('/upload-images', Images::class);
-
 //Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
