@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\Students;
 use App\Http\Livewire\Uploads;
+use App\Models\Image;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,7 @@ Route::get('/', function () {
 });
 Route::get('/students', Students::class);
 Route::get('/uploads', Uploads::class);
+Route::get('/upload-images', Image::class);
 
 Auth::routes();
 
