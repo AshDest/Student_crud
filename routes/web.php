@@ -21,8 +21,8 @@ Route::get('/', function () {
 });
 Route::get('/students', Students::class);
 Route::get('/uploads', Uploads::class);
-Route::get('/upload-images', Image::class);
+Route::get('/upload-images', Images::class);
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
