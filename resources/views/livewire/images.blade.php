@@ -12,10 +12,13 @@
                         <h4>Upload Images</h4>
                     </div>
                     <div class="card-body">
-                        <form id="upload-images" enctype="multipart/form-data">
+                        <form wire:submit.prevent='uploadImages' id="upload-images" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="images">Choose Images</label>
-                                <input type="file" name="images" class="form-control" />
+                                <input type="file" name="images" class="form-control" wire:model='images' multiple />
+                                @error('images.*')
+                                    <span class="text-danger error">{{message}}</span>
+                                @enderror
                             </div>
                             <button type="submit" class="btn btn-success float-right">Upload</button>
                         </form>

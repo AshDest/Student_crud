@@ -11,5 +11,5 @@ class Image extends Model
 
     protected $table = "images";
 
-    protected $fillables = ['filename'];
+    protected $fillable = ['filename'];
 }
